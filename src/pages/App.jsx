@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-import logo from "../assets/devflix.png";
+import logo from "../assets/016fed143773ec247f2069a83192657c1.png";
 import searchIcon from "../assets/search.svg";
 
 import "./App.css";
+import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js";
 import MovieCard from "../components/movieCard/movieCard";
-import Footer from "../components/footer/footer";
-
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,22 +33,39 @@ const App = () => {
 
   return (
     <div id="app">
-      <div className="logo">
-        <img src={logo} alt="logo devflix" />
+      <div className="cabecalhoMaster">
+        <div className="logo">
+          <img src={logo} alt="logo devflix" />
+        </div>
+        <div className="search">
+          <input
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={handleKeyPress}
+            placeholder="Pesquise por filmes"
+          />
+          <img
+            src={searchIcon}
+            alt="Icone de Pesquisa"
+            onClick={() => searchMovies(searchTerm)}
+          />
+        </div>
       </div>
-
-      <div className="search">
-        <input
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          onKeyDown={handleKeyPress}
-          placeholder="Pesquise por filmes"
-        />
-        <img
-          src={searchIcon}
-          alt="Icone de Pesquisa"
-          onClick={() => searchMovies(searchTerm)}
-        />
+      <div className="novidades">
+        <h1>
+          Trending <ion-icon name="flame-outline"></ion-icon>
+        </h1>
+        {movies?.length > 0 ? (
+          <div className="trending">
+            {movies.map((movie) => (
+              <MovieCard key={movie.imdbID} movies={movie} />
+            ))}
+          </div>
+        ) : (
+          <div className="empty">
+            <h2>Nenhum filme encontrado 🥺</h2>
+          </div>
+        )}
       </div>
       {movies?.length > 0 ? (
         <div className="container">
@@ -59,10 +75,10 @@ const App = () => {
         </div>
       ) : (
         <div className="empty">
-          <h2>Nenhum filme encontrado 🥺</h2>
+          <h2></h2>
         </div>
       )}
-      <Footer link={"https://github.com/"}>Eduarda Gomes</Footer>
+      ;
     </div>
   );
 };
