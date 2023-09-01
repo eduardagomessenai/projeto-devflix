@@ -52,9 +52,9 @@ const App = () => {
         </div>
       </div>
       <div className="novidades">
-        <h1>
+        {movies?.length > 0 && <h1>
           Trending <ion-icon name="flame-outline"></ion-icon>
-        </h1>
+        </h1>}
         {movies?.length > 0 ? (
           <div className="trending">
             {movies.map((movie) => (
