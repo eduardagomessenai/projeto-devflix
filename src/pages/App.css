@@ -11,7 +11,7 @@
 
 body {
   box-sizing: border-box;
-  background-color: #18122B;
+  background-color: #18122b;
 }
 
 #app {
@@ -49,7 +49,7 @@ body {
   justify-content: center;
   padding: 1.5rem 1.75rem;
   border-radius: 4rem;
-  background-color: #3930531A;
+  background-color: #3930531a;
 }
 
 .search input {
@@ -57,7 +57,7 @@ body {
   border: none;
   padding-right: 1rem;
   outline: none;
-  color:#443C68;
+  color: #443c68;
   background: #392f551a;
   font-size: 1.5rem;
   font-weight: 500;
@@ -69,9 +69,9 @@ body {
   cursor: pointer;
 }
 
-.novidades{
-  font-size:large;
-  color: #443C68;
+.novidades {
+  font-size: large;
+  color: #443c68;
 }
 
 .empty {
@@ -81,9 +81,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  color:  #443C68;
-  ;
-
+  color: #443c68;
 }
 
 .container {
@@ -134,8 +132,7 @@ body {
   width: 100%;
   opacity: 0;
   top: 0;
-  color: #443C68;
-  ;
+  color: #443c68;
 }
 
 .movie:hover {
@@ -174,8 +171,7 @@ body {
 
 .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
-  color:white;
-  ;
+  color: white;
 }
 
 .movie:hover div:nth-of-type(2) {
@@ -198,6 +194,17 @@ body {
   border-radius: 2em;
 }
 
+@media screen and (max-width: 1440px) {
+  .search {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .search {
+    width: 40%;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .app {
@@ -219,7 +226,7 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .app {
     padding: 4rem 1rem;
   }
@@ -228,9 +235,21 @@ body {
   }
   .container {
     margin-top: 2rem;
+    margin-left: 3em;
   }
   .movie {
     width: 100%;
     margin: 1rem;
+  }
+  .search {
+    margin-top: 5em;
+  }
+  .novidades {
+    margin-left: 8em;
+  }
+
+  .logo img {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
