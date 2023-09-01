@@ -1,5 +1,5 @@
 .movie {
-  width: 310px;
+  width: 410px;
   height: 460px;
   margin: 1.5rem;
   position: relative;
@@ -18,7 +18,7 @@
   width: 100%;
   opacity: 0;
   top: 0;
-  color: #f9d3b4;
+  color: #443C68;
 }
 
 .movie:hover {
@@ -57,7 +57,7 @@
 
 .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
-  color: #f9d3b4;
+  color: #443C68;
 }
 
 .movie:hover div:nth-of-type(2) {
@@ -83,7 +83,7 @@
   overflow: hidden;
   border: none;
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: 5px;
 
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -95,7 +95,7 @@
   width: 100%;
   opacity: 0;
   top: 0;
-  color: #f9d3b4;
+  color: #443C68;
 }
 
 .trending .movie:hover {
@@ -134,7 +134,7 @@
 
 .trending .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
-  color: #f9d3b4;
+  color: #443C68;
 }
 
 .trending .movie:hover div:nth-of-type(2) {
