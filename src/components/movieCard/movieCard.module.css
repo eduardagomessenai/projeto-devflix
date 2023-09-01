@@ -95,7 +95,7 @@
   width: 100%;
   opacity: 0;
   top: 0;
-  color: #443C68;
+  color: #443c68;
 }
 
 .trending .movie:hover {
@@ -134,7 +134,7 @@
 
 .trending .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
-  color: #443C68;
+  color: #443c68;
 }
 
 .trending .movie:hover div:nth-of-type(2) {
@@ -149,3 +149,5 @@
 .trending .movie:hover div:nth-of-type(1) {
   opacity: 1;
 }
+
+
